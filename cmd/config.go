@@ -54,7 +54,7 @@ func ParseConfig(env string) (*Config, error) {
 	viper := viper.New()
 	viper.SetConfigType("yaml")
 	viper.SetConfigName(env)
-	viper.AddConfigPath("../config/")
+	viper.AddConfigPath(".")
 	viper.AddConfigPath("config/")
 	err = viper.ReadInConfig()
 	if err != nil {

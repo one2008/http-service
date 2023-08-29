@@ -15,7 +15,8 @@ const (
 type filterHandle func(c *gin.Context) error
 
 var filterMapping = map[string]filterHandle{
-	"/v1/example": checkV3Auth,
+	"/v1/example":             checkV3Auth,
+	"/v1/serverUnixTimestamp": noCheck,
 }
 
 func AuthMiddleware() gin.HandlerFunc {

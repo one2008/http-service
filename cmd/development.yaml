@@ -1,0 +1,19 @@
+log:
+  app_name: "http"
+  env_name: "test-1"
+
+server:
+  addr: "0.0.0.0:8081"
+eth:
+  rpc_url: "https://rinkeby.infura.io/v3/3085573404af46be96ead378fcbe443d"
+
+database:
+  database_url: "root:Aa123456@/zkdex_perpetual"
+  # database_url: "root:12345678@(huobichain-dev-02.sinnet.huobiidc.com:3306)/zkdex_perpetual_test5"
+  conn_max_life_time: 180 # seconds
+  max_idle_conns: 10
+  max_open_conns: 10
+
+http_auth:
+  key: "account"
+  secret: "account"

@@ -22,12 +22,14 @@ func main() {
 		panic(err)
 	}
 
-	gormDB, err := NewDB(conf, logger)
-	if err != nil {
-		panic(err)
-	}
+	// gormDB, err := NewDB(conf, logger)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	s, err := NewServer(conf, gormDB, logger)
+	// s, err := NewServer(conf, gormDB, logger)
+	s, err := NewServer(conf, logger)
+
 	if err != nil {
 		panic(err)
 	}
@@ -36,5 +38,5 @@ func main() {
 		panic(err)
 	}
 
-	defer ClonseDB(gormDB)
+	// defer ClonseDB(gormDB)
 }

@@ -5,7 +5,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
 
 	"http-service/cmd/log"
 )
@@ -39,7 +38,9 @@ func (g ginLogger) Write(p []byte) (n int, err error) {
 	return len(p), nil
 }
 
-func NewServer(conf *Config, gorm *gorm.DB, logger log.Logger) (*Server, error) {
+// func NewServer(conf *Config, gorm *gorm.DB, logger log.Logger) (*Server, error) {
+func NewServer(conf *Config, logger log.Logger) (*Server, error) {
+
 	Logger = logger
 	Conf = conf
 	router := gin.New()
