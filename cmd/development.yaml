@@ -9,7 +9,6 @@ eth:
 
 database:
   database_url: "root:Aa123456@/zkdex_perpetual"
-  # database_url: "root:12345678@(huobichain-dev-02.sinnet.huobiidc.com:3306)/zkdex_perpetual_test5"
   conn_max_life_time: 180 # seconds
   max_idle_conns: 10
   max_open_conns: 10
